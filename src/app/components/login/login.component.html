@@ -1,0 +1,22 @@
+<body>
+  <header>
+      <h1>Admin Login</h1>
+  </header>
+  <main>
+      <form id="login_form" class="form_class" [formGroup]="logFormData" >
+          <div class="form_div">
+              <label>Email:</label>
+              <input class="field_class" formControlName="email" name="login_txt" type="text" placeholder="Enter your mail" autofocus>
+              <label>Password:</label>
+              <input id="pass" class="field_class" formControlName="password" name="password_txt" type="password" placeholder="Password">
+              <button class="submit_class" type="button"  (click)=" logInCall()">Enter</button>
+            </div>
+          </form>
+  </main>
+  <footer>
+    <span class="copyright">
+      © {{test | date: 'yyyy'}}, made with <i style="color: red
+      ;" class="fa fa-heart heart "></i> by Subham
+  </span>
+  </footer>
+</body>
