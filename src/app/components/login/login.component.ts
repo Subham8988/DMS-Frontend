@@ -33,9 +33,6 @@ export class LoginComponent implements OnInit {
     else{this.toastrService.error('Message please enter a valid password!', ' Error!');}
    }
    else{this.toastrService.error('Message please enter a valid email!', ' Error!');}
-
-  //  console.log('logIndata',logIndata);
-
   }
 
 }

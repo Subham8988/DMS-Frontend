@@ -219,7 +219,7 @@
             <button class="btn btn-info btn-sm" (click)="openModal(document.ocrResponse)">View OCR Data</button>
           </td>
           <td>
-            <a [href]="'http://35.193.158.197:5000/dms/v1/viewDoc/' + document.dmsId" 
+            <a [href]="'http://34.122.150.214:5000/dms/v1/viewDoc/' + document.dmsId" 
                target="_blank" class="btn btn-primary btn-sm">
               View File
             </a>
@@ -229,108 +229,6 @@
     </table>
   </main>
   
-
-<!-- modal for creat userstrt-->
-<div class="modal fade" id="modalForCreatUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Create New User </h5>
-        <button type="button" class="close" data-dismiss="modal" id="close_modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form [formGroup]="userData">
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Name:</label>
-            <input formControlName="name" type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Mobile No:</label>
-            <input formControlName="mobile_no" type="text" class="form-control" id="recipient-name">
-            <span class="text-danger" *ngIf="mobile_no && mobile_no.invalid  ">Please enter a valid activity name</span>
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Email:</label>
-            <input formControlName="email" type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Status:</label>
-            <input formControlName="Status" type="text" class="form-control" id="recipient-name">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary"(click)="createUser()" >Create User</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- modal for creat userEnd-->
-
-<!-- modal for creat rolestrt-->
-<div class="modal fade" id="modalForCreatRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Create Role </h5>
-        <button type="button" class="close"  data-dismiss="modal"  id="close_modal_role" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form [formGroup]="roleData">
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Role Name:</label>
-            <input formControlName="role_Name" type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Role Status:</label>
-            <input formControlName="role_Status" type="text" class="form-control" id="recipient-name">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" (click)="createRole()">Create Role</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- modal for creat roleEnd-->
-
-<!-- modal for creat permissionsstrt-->
-<div class="modal fade" id="modalForCreatPermission" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Create Permission </h5>
-        <button type="button" class="close" id="close_modal_p" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form [formGroup]="permissonData">
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Permisson Name:</label>
-            <input formControlName="permission_Name" type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Permission Status</label>
-            <input formControlName="permission_Status" type="text" class="form-control" id="recipient-name">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" (click)="createPermisons()">Create Permission</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- modal for creat permissionsEnd-->
 
 <!-- Modal for ocr-->
 <div class="modal fade" id="ocrModal" tabindex="-1" role="dialog" aria-labelledby="ocrModalLabel" aria-hidden="true">
@@ -375,7 +273,7 @@
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label for="fileInput">Select a PDF file (Max 5MB)</label>
+            <label for="fileInput">Select a  file (Max 5MB)</label>
             <input type="file" id="fileInput" (change)="onFileSelected($event)" class="form-control">
             <small class="text-danger" *ngIf="fileError">{{ fileError }}</small>
           </div>
